@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import StarWarsCharsList from './components/StarWarsCharsComponents/StarWarsCharsList';
+import StarWarsCharsList from './components/StarWarsCharsList';
 
 
 class App extends Component {
@@ -52,6 +52,13 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        <div className="PageButtons">
+          <button disabled={!this.state.prevPage} onClick={this.prevPage}>Previous</button>
+          <button disabled={!this.state.nextPage} onClick={this.nextPage}>Next</button>
+        </div>
+        <StarWarsCharsList
+          currState={this.state}
+          starwarsChars={this.state.starwarsChars}/>
       </div>
     );
   }

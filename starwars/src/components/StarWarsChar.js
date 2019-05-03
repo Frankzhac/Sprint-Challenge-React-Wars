@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './StarWarsChars.css';
+import './StarWars.css';
 
 class StarWarsChar extends React.Component {
   constructor(props) {
