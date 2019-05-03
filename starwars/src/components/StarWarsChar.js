@@ -114,6 +114,54 @@ class StarWarsChar extends React.Component {
       });
   }
 
+  render() {
+    return (
+      <div className="char-item">
+      {/* {alert(props.charName)} */}
+        <h1 className="char-item-heading">{this.charName}</h1>
+        <div>
+          <span className="char-field">Birth Year: </span>{this.charBirthYear}
+        </div>
+        <div>
+          <span className="char-field">Homeworld: </span>{this.state.homeworld}
+        </div>
+        <div>
+          <span className="char-field">Species: </span>{this.state.species}
+        </div>
+        <div>
+          <span className="char-field">Gender: </span>{this.charGender}
+        </div>
+        <div>
+          <span className="char-field">Hair color: </span>{this.charHairColor}
+        </div>
+        <div>
+          <span className="char-field">Skin color: </span>{this.charSkinColor}
+        </div>
+        <div>
+          <span className="char-field">Height: </span>{this.charHeight}
+        </div>
+        <div>
+          <span className="char-field">Mass: </span>{this.charMass}
+        </div>
+        <h3 className="char-list-start">Vehicles:</h3>
+        <ul>
+          {this.state.vehicles.length ?
+            this.state.vehicles.map(vehicle => <li>{vehicle}</li>) :
+            "[NONE]"}
+        </ul>
+        <h3 className="char-list-start">Starships:</h3>
+        <ul>
+          {this.state.ships.length ?
+            this.state.ships.map(ship => <li>{ship}</li>) :
+            "[NONE]"}
+        </ul>
+        <h3 className="char-list-start">Films:</h3>
+        <ul>
+          {this.state.films.map(film => <li>{film}</li>)}
+        </ul>
+      </div>
+    );
+  }
 
 };
 
