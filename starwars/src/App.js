@@ -5,6 +5,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      prevPage: "",
+      nextPage: "",
       starwarsChars: []
     };
   }
